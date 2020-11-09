@@ -1,3 +1,9 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "" # the name of your site, e.g. ACME Corp.
+url: 'https://icons.land'
+baseurl: ''
+title: 'icons.land'
+
+# https://github.com/jekyll/jekyll/issues/920#issuecomment-315503935
+collections:
+  pages:
+    output: true
+    permalink: /:path
