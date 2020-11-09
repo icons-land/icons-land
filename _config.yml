@@ -1,6 +1,7 @@
-url: 'https://icons.land'
+url: https://icons.land
 baseurl: ''
-title: 'icons.land'
+title: icons.land
+slogan: search engine and API for icon packs
 
 # https://github.com/jekyll/jekyll/issues/920#issuecomment-315503935
 collections:
