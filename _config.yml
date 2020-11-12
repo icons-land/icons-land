@@ -8,3 +8,5 @@ collections:
   pages:
     output: true
     permalink: /:path
+
+exclude: ['data']

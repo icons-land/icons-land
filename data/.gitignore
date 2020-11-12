@@ -1,0 +1,8 @@
+.byebug_history
+
+/vendor/*/
+
+/.env
+
+/data/*
+!/data/.keep
