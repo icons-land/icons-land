@@ -2,7 +2,7 @@
 layout: default
 title: 'Packs'
 ---
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">icons.land</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -17,8 +17,6 @@ title: 'Packs'
         <a class="nav-link" href="/data">Data & API</a>
       </li>
     </ul>
-
-    <!-- TODO github ribbon/corner -->
   </div>
 </nav>
 
@@ -39,7 +37,11 @@ title: 'Packs'
 
       <p>
         I haven't create a fully-functioning API server, for developing purpose, you could directly fetch
-        <a href="https://github.com/namiwang/icons-land/master/data/db.json" target="_blank">the data here</a>, which is <a href="https://github.com/typicode/json-server" target="_blank">json-server</a>-compatible.
+        <a href="https://github.com/namiwang/icons-land/blob/master/data/db.json" target="_blank">this db.json</a>
+        , which is <a href="https://github.com/typicode/json-server" target="_blank">json-server</a>-compatible.
+      </p>
+      <p>
+        Please use a CDN (like <a href="https://raw.githack.com" target="_blank">githack</a>) to fetch the data file.
       </p>
 
       <h5 class="mt-5 mb-3">contribution</h5>
@@ -56,10 +58,11 @@ title: 'Packs'
             <th>icon pack</th>
             <th>version/tag</th>
             <th>icons</th>
+            <th>formats</th>
           </tr>
         </thead>
         <tbody>
-          {% for pack in site.data.detailed_packs %}
+          {% for pack in site.data.packs %}
             <tr>
               <td>
                 <a href="https://github.com/{{ pack.repo }}" target="_blank">
@@ -68,6 +71,7 @@ title: 'Packs'
               </td>
               <td>{{ pack.ver_tag }}</td>
               <td>{{ pack.icons_amount }}</td>
+              <td>{{ pack.formats | join ', ' }}</td>
             </tr>
           {% endfor %}
         </tbody>

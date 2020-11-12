@@ -19,4 +19,4 @@ detailed_packs = PACKS.map{ |pack_name, pack|
   pack
 }
 
-File.open('detailed_packs.yml', 'w') {|f| f.write detailed_packs.to_yaml }
+File.open('../_data/packs.yml', 'w') {|f| f.write detailed_packs.to_yaml }

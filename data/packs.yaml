@@ -1,9 +1,11 @@
 font-awesome:
   repo: FortAwesome/Font-Awesome
   ver_tag: 5.15.1
+  formats: [svg, font]
 bootstrap-icons:
   repo: twbs/icons
   ver_tag: v1.1.0
+  formats: [svg]
 material-design-icons:
   repo: google/material-design-icons
   ver_tag: 4.0.0

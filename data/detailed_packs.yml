@@ -1,6 +1,8 @@
 ---
 - repo: FortAwesome/Font-Awesome
   ver_tag: 5.15.1
+  formats:
+  - svg
   name: font-awesome
   url: https://github.com/FortAwesome/Font-Awesome
   icons_amount: 1459

@@ -3,7 +3,7 @@ layout: default
 title: 'Icons'
 ---
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="/">icons.land</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@ title: 'Icons'
       <h1>icons.land</h1>
       <p class="lead">search icons from popular icon packs</p>
       <ul class="nav justify-content-center">
-        {% for pack in site.data.detailed_packs %}
+        {% for pack in site.data.packs %}
           <li class="nav-item">
             <a class="nav-link" href="{{ pack.url }}" target="_blank">
               {{ pack.name }}
