@@ -27,7 +27,9 @@ title: 'Icons'
   <div class="row mt-5">
     <div class="col text-center">
       <h1>icons.land</h1>
-      <p class="lead">search icons from popular icon packs</p>
+
+      <p class="lead">{{ site.slogan }}</p>
+
       <ul class="nav justify-content-center">
         {% for pack in site.data.packs %}
           <li class="nav-item">
@@ -36,6 +38,12 @@ title: 'Icons'
             </a>
           </li>
         {% endfor %}
+
+        <li class="nav-item">
+          <a class="nav-link" href="/data" target="_blank">
+            all available packs…
+          </a>
+        </li>
       </ul>
     </div>
   </div>
@@ -61,7 +69,8 @@ title: 'Icons'
         <div class="col-12" id="refinement-list-format"></div>
       </div>
     </div>
-    <div id="hits" class="col-12 col-md-9 mt-5 mt-md-0 p-3"></div>
+
+    <div id="hits" class="col-12 col-md-9 mt-5 mt-md-0 p-3" style="min-height: 30vh;"></div>
   </div>
 </div>
 

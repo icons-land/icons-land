@@ -43,6 +43,7 @@ search.addWidgets([
 
   instantsearch.widgets.searchBox({
     container: '#searchbox',
+    placeholder: 'use at least 3 chars to search for icons'
   }),
 
   packRefinementListWithPanel({
