@@ -21,6 +21,21 @@ const search = instantsearch({
   searchClient,
 })
 
+const packRefinementListWithPanel = instantsearch.widgets.panel({
+  templates: { header: 'pack' },
+  hidden: (options) => options.results.nbHits === 0
+})(instantsearch.widgets.refinementList)
+
+const tagsRefinementListWithPanel = instantsearch.widgets.panel({
+  templates: { header: 'tags' },
+  hidden: (options) => options.results.nbHits === 0
+})(instantsearch.widgets.refinementList)
+
+const formatsRefinementListWithPanel = instantsearch.widgets.panel({
+  templates: { header: 'formats' },
+  hidden: (options) => options.results.nbHits === 0
+})(instantsearch.widgets.refinementList)
+
 search.addWidgets([
   instantsearch.widgets.configure({
     hitsPerPage: 1000
@@ -30,10 +45,24 @@ search.addWidgets([
     container: '#searchbox',
   }),
 
-  instantsearch.widgets.refinementList({
+  packRefinementListWithPanel({
     container: '#refinement-list-pack',
     attribute: 'pack.name',
-    limit: 100,
+    limit: 20,
+    sortBy: ['name:asc']
+  }),
+
+  tagsRefinementListWithPanel({
+    container: '#refinement-list-tag',
+    attribute: 'tags',
+    limit: 20,
+    sortBy: ['isRefined', 'count:desc', 'name:asc']
+  }),
+
+  formatsRefinementListWithPanel({
+    container: '#refinement-list-format',
+    attribute: 'pack.formats',
+    limit: 20,
     sortBy: ['name:asc']
   }),
 
@@ -55,7 +84,7 @@ search.addWidgets([
 
         return `
           <li class="col mb-4" data-tags="picture photo">
-            <a class="d-block text-dark text-decoration-none" href="#">
+            <a class="d-block text-dark text-decoration-none">
               <div class="p-3 py-4 mb-2 bg-light text-center rounded">
                 <img
                   src="${svg_url}" class="img-fluid" alt="${hit.name}"

@@ -1,38 +1,47 @@
 font-awesome:
   repo: FortAwesome/Font-Awesome
   ver_tag: 5.15.1
-  formats: [svg, font]
+  formats: [svg, font, react]
 bootstrap-icons:
   repo: twbs/icons
   ver_tag: v1.1.0
-  formats: [svg]
+  formats: [svg, react]
 material-design-icons:
   repo: google/material-design-icons
   ver_tag: 4.0.0
+  formats: [svg, font, react]
 ionicons:
   repo: ionic-team/ionicons
   ver_tag: v5.2.3
+  formats: [svg, react]
 octicons:
   repo: primer/octicons
   ver_tag: v11.0.0
+  formats: [svg, css, react]
 css.gg:
   repo: astrit/css.gg
   ver_tag: 2.0.0
+  formats: [svg, react]
 feather:
   repo: feathericons/feather
   ver_tag: v4.28.0
+  formats: [svg, react]
 carbon-icons:
   repo: carbon-design-system/carbon
   ver_tag: v10.23.2
+  formats: [svg, react]
 typicons:
   repo: stephenhutchings/typicons.font
   ver_tag: v2.0.9
+  formats: [svg, font, react]
 vscode-codicons:
   repo: microsoft/vscode-codicons
   ver_tag: 0.0.12
+  formats: [svg, font, react]
 simple-icons:
   repo: simple-icons/simple-icons
   ver_tag: 3.12.2
+  formats: [svg, react]
 
 # TODO tag branch doesn't include individual svgs
 # devicons:

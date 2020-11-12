@@ -71,11 +71,20 @@ title: 'Packs'
               </td>
               <td>{{ pack.ver_tag }}</td>
               <td>{{ pack.icons_amount }}</td>
-              <td>{{ pack.formats | join ', ' }}</td>
+              <td>{{ pack.formats | join: " " }}</td>
             </tr>
           {% endfor %}
         </tbody>
       </table>
+
+      <p>* formats detail</p>
+      <ul>
+        <li>svg: raw inline svg, or svg &lt;path&gt; in css</li>
+        <li>icon: officially compacted icon fonts</li>
+        <li>react: officially supported/suggested react components lib, or supported by libs like
+          <a href="https://github.com/react-icons/react-icons" target="_blank">react-icons</a>
+        </li>
+      </ul>
     </div>
   </section>
 </div>
